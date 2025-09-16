@@ -1,11 +1,7 @@
 import { ActionType } from "../../action/action_types"
 
 const initialState = {
-    movies: [
-        {
-            name : "Pyae Phyo Khant",
-        }
-    ],
+    movies: [],
     movie: {}
 }
 
@@ -15,8 +11,7 @@ export const movieReducer = (state = initialState, { type, payload }) => {
             return { ...state, movies: payload }
         case ActionType.SELECT_MOVIE:
             return { ...state, movie: payload }
-        case ActionType.REMOVE_SELECTED_MOVIE:
-            return { ...state, movie: {} }
+        
         default:
             return state
     }
