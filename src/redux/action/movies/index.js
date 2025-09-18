@@ -1,7 +1,7 @@
 import { ActionType } from "../action_types"
 
 export const fetchMovie = (movies) => {
-    console.log(movies);
+    
     
     return {
         type : ActionType.FETCH_MOVIES,
@@ -15,8 +15,9 @@ export const selectedMovie = (movie) => {
         payload : movie
     }
 }
-export const removeSelectedMovie = () => {
+export const removeSelectedMovie = (movie) => {
     return {
         type : ActionType.REMOVE_SELECTED_MOVIE,
+        payload : movie
     }
 }
